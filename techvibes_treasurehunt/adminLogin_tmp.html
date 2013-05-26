@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+<head>
+  <meta charset="utf-8" />
+
+  <!-- Set the viewport width to device width for mobile -->
+  <meta name="viewport" content="width=device-width" />
+
+  <title>Page Title</title>
+
+  <!-- Included CSS Files, use foundation.css if you do not want minified code -->
+  <link rel="stylesheet" href="stylesheets/foundation.min.css">
+  <link rel="stylesheet" href="stylesheets/app.css">
+  <style>
+	body {
+		background-color: #FEFEE8;
+	}
+  </style>
+
+  <!-- Custom Modernizr for Foundation -->
+  <script src="javascripts/foundation/modernizr.foundation.js"></script>
+</head>
+
+<body>
+  <!-- Page Layout HTML here -->
+	<div id="adminLogin" class="row">
+		<div style="height: 5em"></div>
+		<div class="six column centered">
+			<!-- Admin Login Form -->
+			<div class="panel radius">
+				<h3>Privileges Required!!</h3>
+				<form>
+				  <fieldset>
+					<legend>Admin Login</legend>
+
+					<label>Username</label>
+					<input type="text" placeholder="username" />
+
+					<label>Password</label>
+					<input type="password" placeholder="password" />
+					
+					<input type="submit" class="button radius" value="Login" />
+					
+					<div style="height: 1em"></div>
+				  </fieldset>
+				</form>
+			</div>
+		</div>
+	</div>
+  <!-- Latest version of jQuery -->
+  <script src="javascripts/jquery.js"></script>
+
+  <!-- Included JS Files (Unminified) -->
+  <!-- [JS Files] -->
+  <!-- We include all the unminified JS as well. Uncomment to use them instead -->
+
+  <!-- Included JS Files (Minified) -->
+  <script src="javascripts/foundation.min.js"></script>
+
+  <!-- Initialize JS Plugins -->
+  <script src="javascripts/app.js"></script>
+</body>
+</html>
