@@ -10,7 +10,7 @@ Structure:
 
 1. "techvibes\_treasure" hunt folder
 --  contains files to upload on server.
-2. "techvibes\_main.sql" file
+2. "techvibes\_treasurehunt.sql" file
 --  .sql file to be uploaded via phpmyadmin onto hosting website.
 
 # How to use this project in your technical fest to organize online-treasure-hunt
