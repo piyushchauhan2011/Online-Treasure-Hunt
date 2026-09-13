@@ -1,0 +1,16 @@
+name: online-treasure-hunt
+type: php
+docroot: techvibes_treasurehunt
+php_version: "8.3"
+webserver_type: nginx-fpm
+database:
+  type: mariadb
+  version: "10.11"
+web_environment:
+  - APP_ENV=development
+  - APP_URL=https://online-treasure-hunt.ddev.site
+  - DB_HOST=db
+  - DB_PORT=3306
+  - DB_NAME=db
+  - DB_USER=db
+  - DB_PASSWORD=db

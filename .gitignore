@@ -1,0 +1,16 @@
+.env
+.env.*
+!.env.example
+config/app.local.php
+*.sql
+!database/schema.sql
+!database/seed.sql
+*.log
+.DS_Store
+.idea/
+.vscode/
+.ddev/.gitignore
+.ddev/.dbimageBuild/
+.ddev/.homeadditions/
+.ddev/.webimageBuild/
+.ddev/.ddev-docker-compose-*.yaml

@@ -1,27 +1,9 @@
-
 <?php
-  $notifications = mysql_query('select * from notifications');
+require dirname(__DIR__) . '/src/bootstrap.php';
+requireMethod('GET');
+$statement = db()->query('SELECT message, published_at FROM notifications WHERE is_active = 1 ORDER BY published_at DESC, id DESC');
+$notifications = $statement->fetchAll();
+renderHeader('Notifications');
 ?>
-<!-- Leaderboard Page Contents -->
-<div class="row" id="leaderboardContent">
-<div class="ten column centered">	
-	<table class="twelve">
-  <thead>
-    <tr>
-      <th>Date</th>
-      <th>Notification</th>
-    </tr>
-  </thead>
-  <tbody>
-    <?php while($row = mysql_fetch_assoc($notifications)) { ?>
-    <tr>
-      <td style="width: 7em;"><?php echo $row['date'] ?></td>
-      <td><?php echo $row['notification'] ?></td>
-    </tr>
-    <?php } ?>
-    
-  </tbody>
-</table>
-</div>
-
-</div>
+<section class="card"><h1>Notifications</h1><ul class="notifications"><?php foreach ($notifications as $notification): ?><li><time datetime="<?= e($notification['published_at']) ?>"><?= e((new DateTimeImmutable($notification['published_at']))->format('M j, Y')) ?></time><span><?= e($notification['message']) ?></span></li><?php endforeach; ?><?php if (!$notifications): ?><li>No active notifications.</li><?php endif; ?></ul></section>
+<?php renderFooter();
