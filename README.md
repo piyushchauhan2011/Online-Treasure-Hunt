@@ -2,6 +2,10 @@
 
 A dependency-light PHP 8.3 treasure hunt: visitors can read public information, players register and sign in, questions unlock sequentially, and the public leaderboard exposes only display names and scores.
 
+## Homepage preview
+
+![Online Treasure Hunt homepage](docs/images/homepage.webp)
+
 ## Supported runtime
 
 PHP 8.3+ with PDO MySQL, mbstring, sessions, and JSON; MariaDB 10.11 (or MySQL-compatible InnoDB with utf8mb4). Local development is supported through DDEV plus a running Docker provider.
